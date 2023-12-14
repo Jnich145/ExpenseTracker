@@ -25,7 +25,8 @@ class RecipeAdmin(admin.ModelAdmin):
         "tax",
         "date",
         "category",
-        "account"
+        "account",
+        "purchaser"
     ]
 
 
