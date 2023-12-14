@@ -22,7 +22,10 @@ class RecipeAdmin(admin.ModelAdmin):
     list_display = [
         "vendor",
         "total",
-        "tax"
+        "tax",
+        "date",
+        "category",
+        "account"
     ]
 
 
