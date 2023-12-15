@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Receipts</title>
-</head>
-<header>
-    <nav>
-        {% if user.is_authenticated %}
-            Hello, {{ user.username }}
-            <a href="{% url 'logout' %}">Logout</a>
-        {% else %}
-            <a href="{% url 'signup' %}">Signup</a>
-            <a href="{% url 'login' %}">Login</a>
-        {% endif %}  
-    </nav>
-</header>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}
+My Receipts
+{%endblock title %}
+
+{% block content %}
     <main>
         <h1>My Receipts</h1>
         <table>
@@ -44,5 +32,4 @@
             </tbody>
         </table>
     </main>
-</body>
-</html>
+    {% endblock content %}
