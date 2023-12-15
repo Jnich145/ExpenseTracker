@@ -17,6 +17,7 @@ class Account(models.Model):
     settings.AUTH_USER_MODEL,
     related_name='accounts',
     on_delete=models.CASCADE,
+    null=True,
     )
 
 class Receipt(models.Model):

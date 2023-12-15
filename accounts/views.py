@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from .forms import LoginForm, SignUpForm
 from django.contrib.auth.models import User
 
-# Still working on this
+
 def login_view(request):
     form = LoginForm(request.POST)
 
