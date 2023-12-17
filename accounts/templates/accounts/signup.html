@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
 </head>
-<header>
-    <nav>
-        {% if user.is_authenticated %}
-            Hello, {{ user.username }}
+<nav>
+    {% if user.is_authenticated %}
+        <ul>
+            <a href="{% url 'home' %}">Home Page</a>
+            <a href="{% url 'category_list' %}">Categories</a>
+            <a href="{% url 'create_category' %}">Create a category</a>
+            <a href="{% url 'accounts_list' %}">Accounts</a>
+            <a href="{% url 'create_account' %}">Create an account</a>
             <a href="{% url 'logout' %}">Logout</a>
-        {% else %}
+        </ul>
+    {% else %}
+        <ul>
             <a href="{% url 'signup' %}">Signup</a>
             <a href="{% url 'login' %}">Login</a>
-        {% endif %}  
-    </nav>
+        </ul>
+    {% endif %}  
+</nav>
 </header>
 <body>
     <main>
