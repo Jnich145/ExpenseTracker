@@ -10,7 +10,7 @@ class ReceiptForm(forms.ModelForm):
             'tax',
             'date',
             'category',
-            'account'
+            'account',
         ]
 
 class ExpenseCategoryForm(forms.ModelForm):
