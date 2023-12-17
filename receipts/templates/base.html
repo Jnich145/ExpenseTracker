@@ -10,17 +10,18 @@
     <nav>
         {% if user.is_authenticated %}
             <ul>
-                <a href="{% url 'home' %}">Home Page</a>
-                <a href="{% url 'category_list' %}">Categories</a>
-                <a href="{% url 'create_category' %}">Create a category</a>
-                <a href="{% url 'accounts_list' %}">Accounts</a>
-                <a href="{% url 'create_account' %}">Create an account</a>
-                <a href="{% url 'logout' %}">Logout</a>
+                <li><a href="{% url 'home' %}">Home Page</a></li>
+                <li><a href="{% url 'create_receipt' %}">Create Receipt</a></li>
+                <li><a href="{% url 'category_list' %}">Categories</a></li>
+                <li><a href="{% url 'create_category' %}">Create a category</a></li>
+                <li><a href="{% url 'accounts_list' %}">Accounts</a></li>
+                <li><a href="{% url 'create_account' %}">Create an account</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
             </ul>
         {% else %}
             <ul>
-                <a href="{% url 'signup' %}">Signup</a>
-                <a href="{% url 'login' %}">Login</a>
+                <li><a href="{% url 'signup' %}">Signup</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
             </ul>
         {% endif %}  
     </nav>
