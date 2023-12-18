@@ -26,5 +26,5 @@ class AccountForm(forms.ModelForm):
         fields = [
             'name',
             'number',
-            'owner',
+            # 'owner',
         ]
